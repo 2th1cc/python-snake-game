@@ -135,15 +135,15 @@ canvas.pack()
 window.update()
 
 # *CODE TO CENTER THE WINDOW, turn on after editing
-# window_width = window.winfo_width()
-# window_height = window.winfo_height()
-# screen_width = window.winfo_screenmmwidth()
-# screen_height = window.winfo_screenheight()
+window_width = window.winfo_width()
+window_height = window.winfo_height()
+screen_width = window.winfo_screenmmwidth()
+screen_height = window.winfo_screenheight()
 
-# x = int((screen_width/2) - (window_width/2))
-# y = int((screen_height/2) - (window_height/2))
+x = int((screen_width/2) - (window_width/2))
+y = int((screen_height/2) - (window_height/2))
 
-# window.geometry(f"{window_width}x{window_height}+{x}+{y}")
+window.geometry(f"{window_width}x{window_height}+{x}+{y}")
 
 window.bind('<Left>', lambda event: change_direction('left'))
 window.bind('<Right>', lambda event: change_direction('right'))
